@@ -1,24 +1,35 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r") as readme_file:
-    readme = readme_file.read()
+from codecs import open
+from os import path
 
-requirements = ["ipython>=6", "nbformat>=4", "nbconvert>=5", "requests>=2"]
+HERE = path.abspath(path.dirname(__file__))
+
+with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name="fuzzy-classifier",
-    version="0.0.1",
-    author="Mateus Gheorghe",
-    author_email="mgheorghecr@gmail.com",
+    version="0.0.2",
     description="A fuzzy logic system for classification problems",
-    long_description=readme,
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Fuzzy-Classifier-Project/fuzzy-classifier",
+    author="Mateus Gheorghe",
+    author_email="mgheorghecr@gmail.com",
     license="MIT",
-    packages=find_packages(),
-    install_requires=requirements,
     classifiers=[
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
-        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Operating System :: OS Independent"
     ],
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=["numpy"],
 )
