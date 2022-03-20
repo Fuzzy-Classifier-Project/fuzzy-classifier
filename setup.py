@@ -13,7 +13,7 @@ setup(
     description="A fuzzy logic system for classification problems",
     long_description=readme,
     long_description_content_type="text/markdown",
-    url="git@github.com:Fuzzy-Classifier-Project/fuzzy-classifier.git",
+    url="https://github.com/Fuzzy-Classifier-Project/fuzzy-classifier",
     license="MIT",
     packages=find_packages(),
     install_requires=requirements,
